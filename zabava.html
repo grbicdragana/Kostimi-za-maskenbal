@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostimi za maskenbal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="zabava.js"></script>   
+</head>
+<body>
+  
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title text-success korpa-naslov">Korpa je prazna</h2>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>br</th>
+                <th>slika</th>
+                <th>naziv</th>
+                <th>cena</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody>
+           
+          </table>
+          <hr>
+          <p class='text-right'>UKUPNA VREDNOST KORPE - <span id='ukupnaCena'>0.00 RSD</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+<div class="jumbotron">
+    <div class="container text-center">
+      <h1 >Kostimi <small>za maskenbal</small></h1>      
+      <p>Budite kreativni, prepustite se mašti!</p>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#" id="logo"><img src="slike/masklogo.jpg" alt="logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="proizvodi.html">Proizvodi</a></li>
+          <li><a href="zabava.html">Zabava na klik</a></li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Vaš nalog</a></li>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-shopping-cart"></span> 
+              Korpa
+              <span class="badge" id="brKorpa"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="root">
+  <div class="container">
+    
+  <h4 v-bind:class="{ podvuceno: jePodvuceno }"> Za vrednost porudžbine koja prelazi iznos od 4,000.00 dinara, isporuka je besplatna.</h4>
+ 
+  <button v-on:click="jePodvuceno = !jePodvuceno">Klikni</button><hr>
+  <p>{{ rec }} za koje imate besplatnu isporuku:</p>
+  <span class="glyphicon glyphicon-piggy-bank"></span>
+  <ul type="square">
+    <li v-for="artikal in artikli"
+      v-if="artikal.cena>4000">
+    {{ artikal.naziv }}: {{ artikal.cena }} din.
+    </li>
+  </ul>
+
+  <h1 v-show="prikazano">Popust do kraja meseca</h1>
+  <a v-on:click.prevent="linkClick" v-bind:href="websajt">Pogledajte vebsajt inodobavljača</a>
+  <span class="label label-primary">Obratite pažnju!</span><br><hr>
+
+  <p> {{ recenica }} </p>
+  <label for="ime">Unesite ime:</label> <br>
+    <input type="text" v-model="posetilac.ime"> <br>
+    <small>{{greskaIme}}</small>
+    <br><br>
+    <label for="ime">Unesite email:</label> <br>
+    <input type="text" v-model="posetilac.email"> <br>
+    <small>{{greskaEmail}}</small><br>
+    <button  class="btn btn-success">Potvrdi</button>
+  <br>
+  <br><hr>
+  <p v-html="websiteTag"></p>
+  <p v-html="websiteTag2"></p>
+  <p v-html="websiteTag3"></p>
+</div><br>
+
+<div class="container">
+<div class="panel panel-info">
+  
+<div class="panel-heading">Iskoristite popust do kraja meseca!</div>
+<div class="panel-body">Ne znate za koji kostim da se odlučite? Kontaktirajte nas! Stojimo na raspolaganju za sva vaša pitanja.</div>
+</div>
+</div>
+</div><br><br>
+
+<div class="container">                 
+  <img src="slike/gameoftrones.jpg" class="img-responsive"  alt="GoT" width="1100px" height="600px"> 
+  <span class="glyphicon glyphicon-print"></span>
+</div><br><br>
+
+<div class="container">
+  <p id="pasus1"></p>
+  <button id="dugme2" class="btn-lg btn-success">Klikni</button><br><br>
+    <input type="text" id="polje1" class="text-primary">
+    <button id="dugme5" class="btn-sm btn-info">Klikni</button><br><br>
+    <p>Za 40% povećana prodaja na teritoriji Srbije u odnosu na prethodnu godinu.</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40%
+  </div>
+</div>
+
+  <button id="dugme9"class="btn-md btn-warning">Klikni</button>
+    <div id="polje3" >
+      <p>Trick or treat!</p>
+    </div><br><hr>
+   <ul class="list-inline">
+      <li><a href="#" data-toggle="tooltip" data-placement="top" title="Budite kreativni!">Prepustite</a></li>
+      <li><a href="#" data-toggle="tooltip" data-placement="left" title="Budite kreativni!">se</a></li>
+      <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Budite kreativni!">mašti.</a></li>
+    </ul><hr>
+    <button id="dugme3"class="btn-sm btn-info">Klikni</button>
+    <div id="polje4">
+      <p>Maskenbal!</p>
+    </div><br><hr>
+
+  
+  <button id="dugme12" class="btn-xs btn-primary">Izmeni stil</button>
+  <button id="dugme13" class="btn-xs btn-danger">Poništi stil</button>
+  <button id="dugme14" class="btn-xs btn-success">Toggle</button>
+  
+</div><br><br>
+
+<div class="container">
+  
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Komentari</button>
+  <div id="demo" class="collapse">
+    Pročitajte komentare naših korisnika:
+  </div>
+</div><br>
+
+<div class="container">
+<div class="media">
+  <div class="media-left">
+    <img src="slike/ivan.png" class="media-object" style="width:30px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Deki71 <small><i>| 2. oktobra 2019. u 20.44</i></small></h4>
+  <p>Kada se mogu očekivati novi proizvodi?</p>
+  </div>
+</div>  
+<hr>
+
+<div class="media">
+   <div class="media-left">
+      <img src="slike/ana.png" class="media-object" style="width:30px">
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Ana Nikolić <small><i>| 14. jula 2020. u 11.03</i></small></h4>
+    <p>Sve pohvale!</p>
+    </div>
+  </div>
+  <hr>
+  <form>
+    <div class="form-group">
+      <label for="comment">Napišite komentar:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+  </form>
+ </div>   
+</div>
+<div class="container">
+  <button type="button" class="btn btn-md btn-success">Pošalji</button>      
+</div>
+
+<div class="container">    
+  <div class="row proizvodi">
+    </div>
+  </div><br>
+ 
+    <footer class="container-fluid text-center">
+    <p>Autor: Dragana Grbić | Kostimi za maskenbal Copyright</p>  
+    <form class="form-inline">
+      <input type="email" class="form-control" size="50" placeholder="Email adresa">
+      <button type="button" class="btn-md btn-danger">Prijavite se</button>
+    </form>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="vue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

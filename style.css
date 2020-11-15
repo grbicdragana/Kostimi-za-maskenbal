@@ -1,0 +1,127 @@
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+}
+
+.nav .badge {
+ background-color: green;
+}
+
+#logo {
+  margin-top: -10px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+
+.naziv {
+  color: #ffa500;
+}
+
+.opis {
+  color: rgb(250, 125, 53);
+}
+
+.podvuceno {
+  text-decoration: underline;
+  color: orangered;
+}
+
+#margine {
+  margin-left: 50px;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  background-image: url("https://www.solidbackgrounds.com/images/1920x1080/1920x1080-pumpkin-solid-color-background.jpg");
+}
+
+#polje3 {
+  width: 100px;
+  height: 80px;
+  background-color:rgb(30, 226, 187);
+  font-size: 20px;
+  text-align: center;
+}
+
+#polje4 {
+  color: rgb(30, 226, 187);
+  background-color:rgb(30, 226, 187); 
+
+}
+
+.dugme-orange {
+  background-color:rgb(236, 153, 28);
+  color: white;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 10px;
+  transition: all 2s;
+}
+
+.dugme-zelena:hover {
+  background-color: dimgray;
+}
+
+footer {
+  background-color: #ff6A00;
+  padding: 25px;
+}
+
+.kartica {
+  position: relative;
+  transition: all 0.5s;  
+}
+
+.kartica:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 2px 3px 11px 0px rgba(255,106,0,1);
+  -moz-box-shadow: 2px 3px 11px 0px rgba(255,106,0,1);
+  box-shadow: 2px 3px 11px 0px rgba(255,106,0,1);
+}
+
+.popust {
+  position: absolute;
+  right: 0px;
+  top: 45px;  
+}
+
+.popust span {
+  padding: 10px;
+  border-radius: 0px;
+  border-bottom-left-radius: 10px;
+}
+
+.kartica {
+  margin-bottom: 40px;
+}
+
+.kartica .panel-heading {
+  font-size: 18px;
+}
+
+.kartica .panel-footer {
+  font-size: 20px;
+}
+
+.kartica .btn {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0px;
+}
+
+table img {
+  width: 50px;
+}
+
+#ukupnaCena {
+  padding-right: 50px;
+  font-size: 22px;
+}
+
+
+

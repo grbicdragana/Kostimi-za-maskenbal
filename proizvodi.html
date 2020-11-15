@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostimi za maskenbal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="podaci.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+  
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title text-success korpa-naslov">Korpa je prazna</h2>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>br</th>
+                <th>slika</th>
+                <th>naziv</th>
+                <th>cena</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody>
+           
+          </table>
+          <hr>
+          <p class='text-right'>UKUPNA VREDNOST KORPE - <span id='ukupnaCena'>0.00 RSD</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+<div class="jumbotron">
+    <div class="container text-center">
+      <h1>Kostimi <small>za maskenbal</small></h1>      
+      <p>Budite kreativni, prepustite se mašti!</p>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#" id="logo"><img src="slike/masklogo.jpg" alt="logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="proizvodi.html">Proizvodi</a></li>
+          <li><a href="zabava.html">Zabava na klik</a></li>
+         
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Vaš nalog</a></li>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-shopping-cart"></span> 
+              Korpa
+              <span class="badge" id="brKorpa"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Akcija traje do kraja meseca!</strong> Za porudžbine preko 4,000.00 dinara, isporuka je besplatna.
+ </div>
+ <div class="container">    
+  <div class="row proizvodi">
+  </div>
+ </div><br>
+  
+  
+  <footer class="container-fluid text-center">
+    <p>Autor: Dragana Grbić | Kostimi za maskenbal Copyright</p>  
+    <form class="form-inline">
+      <input type="email" class="form-control" size="50" placeholder="Email adresa">
+      <button type="button" class="btn btn-danger">Prijavite se</button>
+    </form>
+  </footer>
+  
+</body>
+</html>
